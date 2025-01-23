@@ -16,23 +16,8 @@ function Card(props: CardProps) {
     </div>
   );
 }
-// Fragmento
-// interface CardLiz{
-//     title: string
-//     text: string
-// }
-// export function Liz(props: CardLiz) {
-//   const { ojos, pelo, cuerpo, actitud } = props;
-//   return (
-//     <>
-//       <h5 className="card-ojos">{ojos}</h5>
-//       <p className="card-pelo">{pelo}</p>
-//       <h1 className="card-cuerpo">{cuerpo}</h1>
-//       <span className="card-actitud">{actitud}</span>
-//     </>
-//   );
-// }
-interface LizaProps {
+
+interface LizProps {
   ojos: string;
   pelo: string;
   cuerpo?: string;
@@ -40,17 +25,17 @@ interface LizaProps {
   edad: number;
 }
 
-export function Liza(props: LizaProps) {
+export function Liz(props: LizProps) {
   const { ojos, pelo, cuerpo, actitud } = props;
   let { edad } = props;
 
   return (
     <>
-      <h1 className="liza-ojos">{ojos}</h1>
-      <p className="liza-pelo">{pelo}</p>
-      <h2 className="liza-cuerpo">{cuerpo}</h2>
-      <span className="liza-actitud">{actitud}</span>
-      <h3 className="liza-edad">Edad: {edad}</h3>
+      <h1 className="liz-ojos">{ojos}</h1>
+      <p className="liz-pelo">{pelo}</p>
+      <h2 className="liz-cuerpo">{cuerpo}</h2>
+      <span className="liz-actitud">{actitud}</span>
+      <h3 className="liz-edad">Edad: {edad}</h3>
     </>
   );
 }
