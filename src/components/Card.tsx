@@ -1,10 +1,10 @@
-// COMPONENTE Card
-interface CardProps {
-  body: string;
-}
-function Card(props: CardProps) {
-  props.body;
-  const { body } = props;
+import { ReactNode } from "react";
+
+interface Props {
+  children: ReactNode; // children: es una propiedad especial y única p/ pasar propiedades en componenetes con todo tipo de variables
+} // ReactNode: pasa todot ipo de datos y variables
+function Card(props: Props) {
+  const { children } = props; // Uso de children
   return (
     <div
       className="card"
@@ -12,46 +12,23 @@ function Card(props: CardProps) {
         width: "350px",
       }}
     >
-      <div className="card-body">{body}</div>
+      <div className="card-body">{children}</div>
     </div>
   );
 }
-// Fragmento
-// interface CardLiz{
-//     title: string
-//     text: string
-// }
-// export function Liz(props: CardLiz) {
-//   const { ojos, pelo, cuerpo, actitud } = props;
-//   return (
-//     <>
-//       <h5 className="card-ojos">{ojos}</h5>
-//       <p className="card-pelo">{pelo}</p>
-//       <h1 className="card-cuerpo">{cuerpo}</h1>
-//       <span className="card-actitud">{actitud}</span>
-//     </>
-//   );
-// }
-interface LizaProps {
-  ojos: string;
-  pelo: string;
-  cuerpo?: string;
-  actitud?: string; // actitud? -> aca el signo '?', significa que puede ser opcional colocar ese dato en App.tsx, no obliga a colocar esa variable
-  edad: number;
+
+interface CardBodyProps {
+  title: string; 
+  text: string;
 }
-
-export function Liza(props: LizaProps) {
-  const { ojos, pelo, cuerpo, actitud } = props;
-  let { edad } = props;
-
+// children: es una propiedad especial y única
+export function CardBody(props: CardBodyProps) {
+  const { title, text } = props;
   return (
-    <>
-      <h1 className="liza-ojos">{ojos}</h1>
-      <p className="liza-pelo">{pelo}</p>
-      <h2 className="liza-cuerpo">{cuerpo}</h2>
-      <span className="liza-actitud">{actitud}</span>
-      <h3 className="liza-edad">Edad: {edad}</h3>
-    </>
+    <div>
+      <div className="card-body">{title}</div>
+      <div className="card-body">{text}</div>
+    </div>
   );
 }
 export default Card;

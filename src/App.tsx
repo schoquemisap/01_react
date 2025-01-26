@@ -1,7 +1,11 @@
-import { Liza } from "./components/Card";
+import Card, { CardBody } from "./components/Card";
 
 function App() {
-  return <Liza  ojos={"unicos y bellisimos"} pelo={"castaño"} edad={32} cuerpo={"espectacular"} actitud={"bonita y tierna"} />; // body es el nombre de la propiedad o propiedad
+  return (
+    <Card>
+      <CardBody title="hola todos" text="ESTE es el texto"/> 
+    </Card>
+  ); // SE ESTA PASANDO EL COMPONENTE CardBody
 }
 
 export default App;
