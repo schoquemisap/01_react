@@ -7,6 +7,7 @@ function App() {
     <Card>
       <CardBody title="hola todos" text="ESTE es el texto" />
       <List dato={list} /> 
+      
     </Card>
   ); // desde el componente List recorremos list
 }

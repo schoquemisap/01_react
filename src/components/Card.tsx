@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 interface Props {
   children: ReactNode; // children: es una propiedad especial y única p/ pasar propiedades en componenetes con todo tipo de variables
-} // ReactNode: pasa todot ipo de datos y variables
+} // ReactNode: pasa todo tipo de datos y variables
 function Card(props: Props) {
   const { children } = props; // Uso de children
   return (
